@@ -4,7 +4,6 @@ Personal::Personal(std::string name, int id, int payment, int workTime) : Employ
     this->workTime = workTime;
 }
 
-
 Personal::~Personal() {}
 
 int Personal::getWorkTime() {

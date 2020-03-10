@@ -1,1 +1,1 @@
-#include "Interfaces/ProjectSalry.h"
+#include "Interfaces/ProjectSalary.h"

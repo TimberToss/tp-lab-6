@@ -1,19 +1,18 @@
 #include "../include/Programmer.h"
 
-Programmer::Programmer(std::string name, int id, int workTime, int payment, Project* project, int partOfProject)
-: Engineer(name, id, workTime, payment, project, partOfProject){
+Programmer::Programmer(std::string name, int id, int workTime, int payment, int partOfProject, int projectImportance)
+: Engineer(name, id, workTime, payment, partOfProject, projectImportance) {}
+
+Programmer::~Programmer() {}
+
+int Programmer::calcWorkTimeSalary() {
+    return workTime * payment;
 }
 
-//Programmer::Programmer(std::string name, int id, int workTime, int payment, int partOfProject)
-//: Engineer(name, id, workTime, payment, partOfProject) {
-//
-//}
-
-Programmer::~Programmer()
-{
+int Programmer::calcProjectSalary() {
+    return partOfProject * projectImportance;
 }
 
-int Programmer::calcSalary()
-{
-    return partOfProject * payment + calcWorkTimeSalary();
+int Programmer::calcSalary() {
+    return calcWorkTimeSalary() + calcProjectSalary();
 }

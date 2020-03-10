@@ -6,9 +6,11 @@
 class Programmer :
         public Engineer {
 public:
-    Programmer(std::string name, int id, int workTime, int payment, Project* project, int partOfProject);
-//    Programmer(std::string name, int id, int workTime, int payment, int partOfProject);
+    Programmer(std::string name, int id, int workTime, int payment, int partOfProject, int projectImportance);
     ~Programmer();
     int calcSalary();
 
+protected:
+    int calcWorkTimeSalary();
+    int calcProjectSalary();
 };

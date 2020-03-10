@@ -6,10 +6,10 @@
 class Personal :
         public Employee, public WorkTime {
 public:
-    Personal(std::string name, int id, int payment, int workTime);
     ~Personal();
     int getWorkTime();
     void setWorkTime(int workTime);
 protected:
+    Personal(std::string name, int id, int payment, int workTime);
     int workTime;
 };

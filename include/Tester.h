@@ -3,11 +3,9 @@
 #include "Engineer.h"
 
 class Tester :
-        public Engineer
-{
+        public Engineer {
 public:
-    Tester(std::string name, int id, int workTime, int payment, Project* project);
-//    Tester(std::string name, int id, int workTime, int payment);
+    Tester(std::string name, int id, int workTime, int payment);
     ~Tester();
     int calcSalary();
 };
